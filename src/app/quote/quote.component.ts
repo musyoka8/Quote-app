@@ -16,6 +16,10 @@ export class QuoteComponent implements OnInit {
 
   ];
 
+  completeQuote( isComplete, index){
+
+  }
+
   constructor() { }
 
   ngOnInit() {
