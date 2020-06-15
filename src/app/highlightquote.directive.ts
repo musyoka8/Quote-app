@@ -8,7 +8,7 @@ export class HighlightquoteDirective {
   constructor(private elem: ElementRef ) {}
   private quoteDeco(action: string ){
     // tslint:disable-next-line: whitespace
-    this.elem.nativeElement.style.backroundColor='orange'
+    this.elem.nativeElement.style.backroundColor='orange';
   }
 
 }
