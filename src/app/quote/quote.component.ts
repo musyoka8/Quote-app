@@ -16,8 +16,14 @@ export class QuoteComponent implements OnInit {
 
   ];
 
-  completeQuote( isComplete, index){
-
+  deleteQuote(isComplete, index){
+    if (isComplete){
+      // tslint:disable-next-line:prefer-const
+      let toDelete = confirm( `Are you sure you want to delete ${this.quotes[index].quote}?`);
+      if (toDelete){
+        this.quotes.splice(index, 1);
+      }
+    }
   }
 
   constructor() { }
