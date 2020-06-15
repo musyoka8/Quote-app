@@ -1,1 +1,9 @@
-<p>quote works!</p>
+<div class="container">
+    <h1>WELCOME TO AN AMAZING APP QUOTES</h1>
+    <P>This is an app that allows you to get quotes from different people around the world. Feel free to add your own composed quotes and rate a quote.</P>
+    <ul>
+      <li *ngFor='let quote of quotes'>
+        {{quote.quote}}
+      </li>
+    </ul>
+</div>
