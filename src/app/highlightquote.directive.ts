@@ -1,14 +1,15 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlightquote]'
+  selector: '[appHighlightQuote]'
 })
-export class HighlightquoteDirective {
+export class HighlightQuoteDirective {
 
-  constructor(private elem: ElementRef ) {}
-  private quoteDeco(action: string ){
-    // tslint:disable-next-line: whitespace
-    this.elem.nativeElement.style.backroundColor='orange';
+  constructor(private elem: ElementRef) {
+    this.elem.nativeElement.style.backgroundColor = 'orange';
   }
+
+
+
 
 }

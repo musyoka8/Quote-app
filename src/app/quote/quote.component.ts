@@ -16,6 +16,10 @@ export class QuoteComponent implements OnInit {
 
   ];
 
+  preNum :number;
+  lastNum :number;
+  counter: number
+
   deleteQuote(isComplete, index){
     if (isComplete){
       // tslint:disable-next-line:prefer-const
@@ -24,6 +28,39 @@ export class QuoteComponent implements OnInit {
         this.quotes.splice(index, 1);
       }
     }
+  }
+
+
+  addNewQuote(quote){
+    // tslint:disable-next-line: prefer-const
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.myDate = new Date(quote.myDate);
+    this.quotes.push(quote);
+  }
+
+  addTotal(mine, index){
+    if (mine){
+      this.quotes[index].upvote += 1;
+    }
+  }
+
+  adTotal(isDown, index){
+    if (isDown){
+      this.quotes[index].downvote += 1;
+    }
+  }
+
+
+  highestUpvote(){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].upvote;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
   }
 
   constructor() { }

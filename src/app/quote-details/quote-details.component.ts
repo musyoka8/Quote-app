@@ -7,13 +7,22 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  constructor() { }
 
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
+
+  @Output() isUp = new EventEmitter<boolean>();
+  @Output() isDown = new EventEmitter<boolean>();
   quoteDelete(complete: boolean){
     this.isComplete.emit(complete);
   }
-  constructor() { }
+  addUp(add: boolean){
+    this.isUp.emit(add);
+  }
+  addDown(ad: boolean){
+    this.isDown.emit(ad);
+  }
 
   ngOnInit() {
   }
