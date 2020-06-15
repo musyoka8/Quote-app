@@ -1,10 +1,19 @@
 <div class="container">
     <h1>WELCOME TO AN AMAZING APP QUOTES</h1>
     <P>This is an app that allows you to get quotes from different people around the world. Feel free to add your own composed quotes and rate a quote.</P>
-    <ul>
-      <li *ngFor='let quote of quotes' let i = index>
-        {{quote.quote}}
-        <app-quote-details [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-quote-details>
-      </li>
-    </ul>
+    <div class ="row">
+      <div class="col-md-6">
+         <div *ngFor='let quote of quotes, let i = index'>
+            <div>
+                <p appHiglightQuote>{{quote.quote}}</p>
+            </div>
+            <div>
+              <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+          <app-form></app-form>
+      </div>
+    </div>
 </div>
