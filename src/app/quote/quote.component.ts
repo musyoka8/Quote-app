@@ -16,9 +16,9 @@ export class QuoteComponent implements OnInit {
 
   ];
 
-  preNum :number;
-  lastNum :number;
-  counter: number
+  firstNum :number
+  lastNum :number
+  count: number
 
   deleteQuote(isComplete, index){
     if (isComplete){
@@ -52,20 +52,21 @@ export class QuoteComponent implements OnInit {
   }
 
 
-  highestUpvote(){
-    this.preNum = 0
+  loopVote(){
+    this.firstNum = 0
     this.lastNum = 0
 
-    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
-      this.lastNum = this.quotes[this.counter].upvote;
-      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    for(this.count=0 ; this.count < this.quotes.length; this.count++) {
+      this.lastNum = this.quotes[this.count].upvote;
+      if(this.lastNum > this.firstNum){this.firstNum = this.lastNum}
     }
-    return  this.preNum
+    return  this.firstNum
+
   }
 
-  constructor() { }
+  constructor () {}
 
-  ngOnInit() {
+  ngOnInit(){
   }
 
 }
