@@ -5,11 +5,11 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 })
 export class HighlightQuoteDirective {
 
-  constructor(private elem: ElementRef) {
-    this.elem.nativeElement.style.backgroundColor = 'orange';
+  constructor(private elem:ElementRef) {
+    this.elem.nativeElement.style.backgroundColor='Orange';
   }
-
-
-
+  
+    
+   
 
 }

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
-import { HighlightquoteDirective } from './highlightquote.directive';
+import { HighlightQuoteDirective } from './highlightquote.directive';
 import { TimeCountPipe } from './time-count.pipe';
 import { FormComponent } from './form/form.component';
 
@@ -16,7 +16,7 @@ import { FormComponent } from './form/form.component';
     AppComponent,
     QuoteComponent,
     QuoteDetailsComponent,
-    HighlightquoteDirective,
+    HighlightQuoteDirective,
     TimeCountPipe,
     FormComponent,
 
