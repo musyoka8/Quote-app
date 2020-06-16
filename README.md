@@ -1,5 +1,5 @@
 :satisfied:
-#  AngularQuotes
+#  Angular Quotes
 #### This project interlinks people who like quotes to create and to see other peoples quotes.
 #### By **WILFRED MUSYOKA**&trade;
 
