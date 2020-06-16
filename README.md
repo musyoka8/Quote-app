@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Project live site
   This is the live .[ Click for the demo]()
 
-  ![Image](src/assets/)
+  ![Image](src/assets/image.png)
 
   ## Technologies Used
 * HTML-For Building Mark Up pages
